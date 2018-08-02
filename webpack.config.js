@@ -10,6 +10,13 @@ module.exports = {
     filename: "bundle.js",
     path: __dirname + "/public"
   },
+  devServer: {
+    contentBase: "./public",
+    port: 9000,
+    hot: true,
+    inline: true,
+    open: true
+  },
   optimization: {
     minimizer: [new OptimizeCssAssetsPlugin({})]
   },

@@ -1,6 +1,6 @@
 body {
   background-color: red;
-  background-image: url(659a52b5424f180960a2ee23a8ba4966.png);
+  background: url(659a52b5424f180960a2ee23a8ba4966.png) no-repeat center;
   height: 100vh; }
 
 .botao {

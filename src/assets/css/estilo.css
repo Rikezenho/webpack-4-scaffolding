@@ -1,5 +1,5 @@
 body {
   background-color: red;
-  background-image: url(../imgs/logo.png);
+  background: url(../imgs/logo.png) no-repeat;
   height: 100vh;
 }
