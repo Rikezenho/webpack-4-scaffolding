@@ -7,7 +7,7 @@ module.exports = {
   mode: modoDev ? "development" : "production",
   entry: "./src/index.jsx",
   output: {
-    filename: "bundle.js",
+    filename: "app.js",
     path: __dirname + "/public"
   },
   devServer: {
@@ -22,7 +22,7 @@ module.exports = {
   },
   plugins: [
     new MiniCssExtractPlugin({
-      filename: "style.css"
+      filename: "app.css"
     })
   ],
   module: {
