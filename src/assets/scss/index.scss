@@ -2,3 +2,9 @@ $cor-botao-padrao: #fff;
 $cor-bg-botao-padrao: #19b3e6;
 
 @import "botao";
+
+body {
+  background-color: red;
+  background: url(../imgs/logo.png) no-repeat;
+  height: 100vh;
+}
