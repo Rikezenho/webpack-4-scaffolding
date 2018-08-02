@@ -7,7 +7,7 @@ module.exports = {
   mode: modoDev ? "development" : "production",
   entry: "./src/index.jsx",
   output: {
-    filename: "app.js",
+    filename: "./app.js",
     path: __dirname + "/public"
   },
   devServer: {
@@ -28,17 +28,17 @@ module.exports = {
   module: {
     rules: [
       {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use: ["babel-loader"]
+      },
+      {
         test: /\.(css|scss)$/,
         use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
         use: ["file-loader"]
-      },
-      {
-        test: /\.(js|jsx)$/,
-        exclude: /node_modules/,
-        use: ["babel-loader"]
       }
     ]
   }
