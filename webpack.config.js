@@ -13,9 +13,8 @@ module.exports = {
   devServer: {
     contentBase: "./public",
     port: 9000,
-    hot: true,
-    inline: true,
-    open: true
+    open: true,
+    overlay: true
   },
   optimization: {
     minimizer: [new OptimizeCssAssetsPlugin({})]
@@ -29,7 +28,11 @@ module.exports = {
     rules: [
       {
         test: /\.(css|scss)$/,
-        use: [MiniCssExtractPlugin.loader, "css-loader", "sass-loader"]
+        use: [
+          modoDev ? "style-loader" : MiniCssExtractPlugin.loader,
+          "css-loader",
+          "sass-loader"
+        ]
       },
       {
         test: /\.(png|svg|jpg|gif)$/,
